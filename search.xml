@@ -4,38 +4,25 @@
   
     
     <entry>
-      <title>Test Categories</title>
-      <link href="/2019/02/22/Test-Categories/"/>
-      <url>/2019/02/22/Test-Categories/</url>
+      <title>C++实现自动生成 get和set方法</title>
+      <link href="/2019/02/28/C-%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90-get%E5%92%8Cset%E6%96%B9%E6%B3%95/"/>
+      <url>/2019/02/28/C-%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90-get%E5%92%8Cset%E6%96%B9%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[<h1 id="Test-Categories"><a href="#Test-Categories" class="headerlink" title="Test Categories"></a>Test Categories</h1><p>test categories…</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="C-自动生成get，set方法"><a href="#C-自动生成get，set方法" class="headerlink" title="C++自动生成get，set方法"></a>C++自动生成get，set方法</h2><blockquote><p>PropertyBuilder.h<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> PROPERTYBUILDER_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PROPERTYBUILDER_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PropertyBuilderByName(type, name, access_permission)\</span></span><br><span class="line">    access_permission:\</span><br><span class="line">        type m_#<span class="meta">#name;\</span></span><br><span class="line">    <span class="keyword">public</span>:\</span><br><span class="line">    <span class="keyword">inline</span> <span class="keyword">void</span> <span class="built_in">set</span>#<span class="meta">#name(type v) &#123;\</span></span><br><span class="line">        m_#<span class="meta">#name = v;\</span></span><br><span class="line">    &#125;\</span><br><span class="line">    <span class="keyword">inline</span> type get#<span class="meta">#name() &#123;\</span></span><br><span class="line">        <span class="keyword">return</span> m_##name;\</span><br><span class="line">    &#125;\</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PointerPropertyBuilderByName(type, name, access_permission)\</span></span><br><span class="line">    access_permission:\</span><br><span class="line">        type* m_#<span class="meta">#name;\</span></span><br><span class="line">    <span class="keyword">public</span>:\</span><br><span class="line">        <span class="keyword">inline</span> <span class="keyword">void</span> <span class="built_in">set</span>#<span class="meta">#name(type* v)&#123;\</span></span><br><span class="line">            m_#<span class="meta">#name = v;\</span></span><br><span class="line">        &#125;\</span><br><span class="line">        <span class="keyword">inline</span> type* get#<span class="meta">#name()&#123;\</span></span><br><span class="line">            <span class="keyword">return</span> m_##name;\</span><br><span class="line">        &#125;\</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">// PROPERTYBUILDER_H</span></span></span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>使用方法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"PropertyBuilder.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    User()&#123;&#125;</span><br><span class="line">    PropertyBuilderByName(<span class="keyword">int</span>, UserId, <span class="keyword">private</span>)</span><br><span class="line">    PropertyBuilderByName(QString, UserName, <span class="keyword">private</span>)</span><br><span class="line">    PropertyBuilderByName(QString, UserPwd,   <span class="keyword">private</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p></blockquote>]]></content>
       
       
       <categories>
           
-          <category> test </category>
+          <category> 技术积累 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> test </tag>
+            <tag> C++ </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/02/21/hello-world/"/>
-      <url>/2019/02/21/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p> <a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
