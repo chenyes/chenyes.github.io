@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenyes.github.io/"/>
-  <updated>2019-02-28T15:15:47.961Z</updated>
+  <updated>2019-03-01T04:24:19.292Z</updated>
   <id>http://chenyes.github.io/</id>
   
   <author>
@@ -17,16 +17,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="http://chenyes.github.io/2019/02/28/test/"/>
-    <id>http://chenyes.github.io/2019/02/28/test/</id>
-    <published>2019-02-28T15:15:47.000Z</published>
-    <updated>2019-02-28T15:15:47.961Z</updated>
+    <title>QSetting 保存中文配置</title>
+    <link href="http://chenyes.github.io/2019/03/01/QSetting-%E4%BF%9D%E5%AD%98%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/"/>
+    <id>http://chenyes.github.io/2019/03/01/QSetting-保存中文配置/</id>
+    <published>2019-03-01T04:24:07.000Z</published>
+    <updated>2019-03-01T04:24:19.292Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="QSetting-保存中文配置"><a href="#QSetting-保存中文配置" class="headerlink" title="QSetting 保存中文配置"></a>QSetting 保存中文配置</h3><blockquote><p>使用QSetting时，如果想要保存中文内容，默认是会转成utf-8的格式保存的，这样使用起来并不友好。我们可以通过修改QSetting的默认编码来保存中文。</p></blockquote><a id="more"></a><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QSettings m_setting = <span class="keyword">new</span> QSettings(configFile, QSettings::IniFormat, <span class="keyword">this</span>);</span><br><span class="line">m_setting-&gt;setIniCodec(QTextCodec::codecForName(<span class="string">"GB2312"</span>));</span><br></pre></td></tr></table></figure><blockquote><p>测试一下</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m_setting-&gt;setValue(<span class="string">"测试Key"</span>,<span class="string">"测试Value"</span>);</span><br><span class="line">m_setting-&gt;sync();</span><br></pre></td></tr></table></figure><blockquote><p>看下配置文件保存的键值对是怎样的</p></blockquote><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[General]</span></span><br><span class="line">%U6D4B%U8BD5Key=测试Value</span><br></pre></td></tr></table></figure><p>可见对于key来说，还是会被转换，但是value值成功保存为中文了。<br>使用的时候我们只要保证key为英文，那么配置文件里就不会出现看不懂的编码内容了。</p>]]></content>
     
     <summary type="html">
     
+      &lt;h3 id=&quot;QSetting-保存中文配置&quot;&gt;&lt;a href=&quot;#QSetting-保存中文配置&quot; class=&quot;headerlink&quot; title=&quot;QSetting 保存中文配置&quot;&gt;&lt;/a&gt;QSetting 保存中文配置&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;使用QSetting时，如果想要保存中文内容，默认是会转成utf-8的格式保存的，这样使用起来并不友好。我们可以通过修改QSetting的默认编码来保存中文。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
     </summary>
     
+      <category term="技术积累" scheme="http://chenyes.github.io/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+      <category term="C++" scheme="http://chenyes.github.io/tags/C/"/>
+    
+      <category term="QT" scheme="http://chenyes.github.io/tags/QT/"/>
+    
+      <category term="QSetting" scheme="http://chenyes.github.io/tags/QSetting/"/>
     
   </entry>
   
