@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chenyes.github.io/"/>
-  <updated>2019-03-03T02:59:16.925Z</updated>
+  <updated>2019-03-25T14:04:29.955Z</updated>
   <id>http://chenyes.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSM框架学习（一） - spring框架</title>
+    <link href="http://chenyes.github.io/2019/03/25/SSM%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89-spring%E6%A1%86%E6%9E%B6/"/>
+    <id>http://chenyes.github.io/2019/03/25/SSM框架学习（一）-spring框架/</id>
+    <published>2019-03-25T14:04:29.000Z</published>
+    <updated>2019-03-25T14:04:29.955Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SSM框架-Spring"><a href="#SSM框架-Spring" class="headerlink" title="SSM框架 - Spring"></a>SSM框架 - Spring</h1><p>Spring 是一个轻量级的企业级应用开发框架，于 2004 年由 Rod Johnson 发布了1.0 版本，经过多年的更新迭代，已经逐渐成为 Java 开源世界的第一框架，Spring 框架号称 Java EE 应用的一站式解决方案，与各个优秀的 MVC 框架如 Spring MVC 、Struts2 、JSF 等可以无缝整合，与各个 ORM 框架如 Hibernate 、MyBatis 、JPA 等也可以无缝衔接，其他各种技术也因为 Spring 的存在而被很容易地整合进项目开发之中，如 Redis 整合、Log4J 整合、ElasticSearch 整合、RabbitMQ 整合、Quartz 整合、Thymeleaf 整合等等，只要你开发中需要使用到的技术，Spring 都提供了极好的封装和整合体验，这也是为何 Spring 生命力如此强大的原因，暂时还没有能够替代 Spring 的框架出现。    </p><a id="more"></a><p>Spring 框架提供约 20 个模块，如下图：<br><img src="/images/2019/03/25/9e7b4e70-4f06-11e9-a86a-75f13d697b8c.png" alt="image.png"></p><p>Spring 框架并不强制应用完全依赖于 Spring，开发者可自由选择需要的模块。</p><p>总结起来，Spring 框架有如下优点：</p><ul><li>Spring 的 IOC 容器将对象之间的依赖关系交由 Spring 控制，提高了组件之间的解耦， 简化 Java 开发；</li><li>面向切面编程，Spring AOP 是面向对象编程（OOP）的一种补充，通过这种方式将系统中的一些通用任务提取出来进行单独处理，比如事务处理、日志模块、权限控制、性能监控等，避免大量的代码重复，使得代码更加简洁，复用性更强，也帮助开发人员更加关注业务逻辑；</li><li>非侵入式，代码的污染极低；</li><li>无与伦比的兼容性，与其他优秀的第三方框架无缝整合；</li><li>Spring 框架的源码是无与伦比的 Java 代码盛宴；</li><li>高度的开放性；</li><li>开源社区十分活跃，文档齐全，学习成本不高。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;SSM框架-Spring&quot;&gt;&lt;a href=&quot;#SSM框架-Spring&quot; class=&quot;headerlink&quot; title=&quot;SSM框架 - Spring&quot;&gt;&lt;/a&gt;SSM框架 - Spring&lt;/h1&gt;&lt;p&gt;Spring 是一个轻量级的企业级应用开发框架，于 2004 年由 Rod Johnson 发布了1.0 版本，经过多年的更新迭代，已经逐渐成为 Java 开源世界的第一框架，Spring 框架号称 Java EE 应用的一站式解决方案，与各个优秀的 MVC 框架如 Spring MVC 、Struts2 、JSF 等可以无缝整合，与各个 ORM 框架如 Hibernate 、MyBatis 、JPA 等也可以无缝衔接，其他各种技术也因为 Spring 的存在而被很容易地整合进项目开发之中，如 Redis 整合、Log4J 整合、ElasticSearch 整合、RabbitMQ 整合、Quartz 整合、Thymeleaf 整合等等，只要你开发中需要使用到的技术，Spring 都提供了极好的封装和整合体验，这也是为何 Spring 生命力如此强大的原因，暂时还没有能够替代 Spring 的框架出现。    &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="SSM框架学习" scheme="http://chenyes.github.io/categories/SSM%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="JAVA WEB" scheme="http://chenyes.github.io/tags/JAVA-WEB/"/>
+    
+  </entry>
   
   <entry>
     <title>vue 入门小实例</title>
